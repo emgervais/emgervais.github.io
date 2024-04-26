@@ -27,8 +27,8 @@ main {
 }
 
 section {
-    height: 100vh;
-    max-width: 960px;
+    max-width: 980px;
+    min-height: 750px;
     /* border: white 2px solid; */
 }
 /* hero section -----------------*/
@@ -80,6 +80,11 @@ section {
 
 /*-------------skills------------------*/
 
+#languages h1{
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 10px;
+}
 .skills {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -94,13 +99,14 @@ section {
 }
 
 .skills li{
-    /* width: 300px;
-    height: 200px; */
-    border: white 2px solid;
+    padding: 16px;
+    height: 174px;
+    border: hsla(0, 0%, 100%, .2) 0.5px solid;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .skills li h2 {
@@ -108,8 +114,54 @@ section {
     font-weight: 700;
 }
 
-.skills li svg,
-.skills li i {
-    height: 50px;
-    font-size: 50px;
+.plus {
+    position: absolute;
+    width: 1.5rem;
+}
+
+.top-right {
+    right:-0.75rem;
+    top:-0.75rem;
+}
+.top-left {
+    left:-0.75rem;
+    top:-0.75rem;
+}
+.bot-right {
+    right:-0.75rem;
+    bottom:-0.75rem;
+}
+.bot-left {
+    left:-0.75rem;
+    bottom:-0.75rem;
+}
+
+.icon-back {
+    background: radial-gradient(circle, rgba(19, 18, 18, 0.7) 0%, rgba(19, 18, 18, 0.7) 50%, transparent 100%);
+    /* background-color: rgba(19, 18, 18, 0.7); */
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 50%;
+}
+
+.color-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, #34d399, #4f46e5);
+    opacity: 0;
+    backdrop-filter: blur(20px);
+    transition: opacity 0.5s;
+    mask-image: radial-gradient(250px at 255.5px 59.5px, white, transparent);
+}
+
+.skills li:hover .color-back {
+    opacity: 1;
 }
