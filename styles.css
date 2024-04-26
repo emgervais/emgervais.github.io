@@ -9,11 +9,12 @@ html {
 
 
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body, h1, h2, h3, h4, h5, h6, p, ol, ul, li {
   margin: 0;
   padding: 0;
   font-weight: normal;
   color:white;
+  list-style: none;
 }
 
 body {
@@ -31,6 +32,13 @@ section {
     min-height: 750px;
     /* border: white 2px solid; */
 }
+
+section h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    padding: 10px;
+}
+
 /* hero section -----------------*/
 
 #landing {
@@ -43,6 +51,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    line-height: 6rem;
     height:50%;
     width:55%;
 }
@@ -80,22 +89,10 @@ section {
 
 /*-------------skills------------------*/
 
-#languages h1{
-    font-size: 4.5rem;
-    font-weight: 900;
-    padding: 10px;
-}
 .skills {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap:1.5rem;
-}
-
-@media (min-width: 768px) {
-    .skills {grid-template-columns: repeat(2, minmax(0, 1fr));}
-}
-@media (min-width: 1024px) {
-    .skills {grid-template-columns: repeat(3, minmax(0, 1fr));}
 }
 
 .skills li{
@@ -164,4 +161,47 @@ section {
 
 .skills li:hover .color-back {
     opacity: 1;
+}
+
+/* ----------about------------*/
+
+#about p {
+    font-size: 1.2rem;
+    padding:25px;
+    line-height: 2rem;
+}
+
+/* ----------projet------------*/
+
+.project {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap:3rem;
+}
+
+.project li{
+    padding: 10px;
+    border: white 0.5px solid;
+    border-radius: 25px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+}
+
+.project img {
+    border: hsla(0, 0%, 100%) 1px solid;
+    border-radius: 10px;
+    max-height: 50%;
+}
+
+@media (min-width: 768px) {
+    .skills {grid-template-columns: repeat(2, minmax(0, 1fr));}
+    .project {grid-template-columns: repeat(2, minmax(0, 1fr));}
+}
+@media (min-width: 1024px) {
+    .skills {grid-template-columns: repeat(3, minmax(0, 1fr));}
+    .project {grid-template-columns: repeat(3, minmax(0, 1fr));}
 }
