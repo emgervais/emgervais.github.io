@@ -11,28 +11,30 @@
 
 <header class="">
     <ul>
-
+        <li ><a onclick="scrollToSection('landing', this)" class="underline">Home</a></li>
+        <li><a onclick="scrollToSection('about', this)" >About</a></li>
+        <li><a onclick="scrollToSection('languages', this)">Skills</a></li>
+        <li><a onclick="scrollToSection('projects', this)">Projects</a></li>
+        <li><a onclick="scrollToSection('contact', this)">Contact</a></li>
     </ul>   
 </header>
 
 <main class="container">
     <section id="landing">
         <div id="main-text">
-            <h1>Salut,<br>je suis <span style="color:rgb(212, 44, 44);">Émile,</span><br>étudiant en programmation</h1>
-            <h1></h1>
-            <h1></h1>
-            <p>Présentement à la recherche d'un stage!</p>
-            <button>Contacter</button>
+            <h1>Hi!<br>I am <span style="color:rgb(212, 44, 44);">Émile</span>,<br>A programming student</h1>
+            <p>Currently searching for an internship!</p>
+            <button onclick="scrollToSection('contact', this)">Contact</button>
         </div>
-        <div class="img-container"><img src="./img/egervais.jpg"></div>
+        <div class="img-container"><img src="./media/egervais.jpg"></div>
     </section>
     <section id="about">
-        <h1>À propos</h1>
-        <p>Salut à tous!<br>Je suis un étudiant de la fameuse école 42 dont tout le monde parle un peu partout dans le monde. Je suis rendu à l’étape de faire un stage pour gagner en expérience de travail en entreprise. Mon cheminement académique m'a permis d'acquérir des compétences techniques solides en programmation grâce à un apprentissage axé sur l’application des concepts appris. À 42 Québec, différents “soft skills” ont été assimilés tels que le travail d’équipe, la résolution de problèmes complexes et l’autonomie.
-            <br><br>À mes heures perdues, je pratique le badminton et les échecs à un niveau compétitif. J’adore aussi me lancer dans différents projets personnels de programmation. Vous pourrez en explorer quelques-uns plus bas.</p>
+        <h1>About</h1>
+        <p>I am a student at the renowned 42 school that everyone talks about around the world. I am currently in search of an internship to gain some work experience in the industry. My academic journey has equipped me with strong technical skills in programming through a learning approach focused on applying learned concepts. At 42 Québec, I've also developed various soft skills such as teamwork, solving complex problems, and autonomy.
+            <br><br>In my free time, I engage in competitive badminton and chess. I also love diving into various personal programming projects. You can explore some of them below.</p>
     </section>
     <section id="languages">
-        <h1>languages</h1>
+        <h1>Skills</h1>
         <ul class="skills">
             <li class="skill-card">
                 <div class="color-back"></div>
@@ -101,21 +103,27 @@
         </ul>
     </section>
     <section id="projects">
-        <h1>Projets</h1>
+        <h1>Projects</h1>
         <ul class="project">
-            <li class="project-box"><h3>Transcendence</h3><img><p></p></li>
-            <li class="project-box" data-img="img/chess.png" data-gif="//s3.ezgif.com/tmp/ezgif-3-6ab02a0d82.gif"><h3>Chess</h3><img alt="chess"><p></p></li>
-            <li class="project-box" data-img="img/irc.png" data-gif="https://i.postimg.cc/XNs0RG7G/irc.gif"><h3>Ft_irc</h3><img alt="irc"><p></p></li>
-            <li class="project-box"><h3>Fractal</h3><img><p></p></li>
-            <li class="project-box" data-img="img/boutdepeau.png" data-gif="//s3.ezgif.com/tmp/ezgif-3-29ef75209d.gif"><h3>Boutdepeau</h3><img><p></p></li>
-            <li class="project-box" data-img="img/linear.png" data-gif="//s1.ezgif.com/tmp/ezgif-1-c114b3898a.gif"><h3>Linear_regression</h3><img><p></p></li>
-            <li class="project-box" data-img="https://i.postimg.cc/Kzv0JVYs/Screen-Shot-2024-01-05-at-4-18-46-PM.png"><h3>Minishell</h3><img alt="minishell"><p></p></li>
-            <li class="project-box" data-img="img/container.png" data-gif="//s1.ezgif.com/tmp/ezgif-1-c830ccf829.gif"><h3>Containers</h3><img><p></p></li>
+            <li class="project-box" data-img="media/transcendence.png" data-gif="media/trans.gif"><h3>Transcendence</h3><img><div class="project-desc"><p>This team school project is a website with full user capility. The user is able to play pong locally, online or in a tournement and manage his account. A chat is also available.</p><p>(Django, JS, Html, Css, Postgres, Docker)</p><button ><a href="https://github.com/emgervais/transcendance" target="_blank">More info</a></button></div></li>
+            <li class="project-box" data-img="media/chess.png" data-gif="media/chess.gif"><h3>Chess</h3><img alt="chess"><div class="project-desc"><p>A personnal projectaiming to make a chess engine. It utilizes a not too efficient search algorithm. It also features a fully fonctionnal duo mode.</p><p>(Html, CSS, JS)</p><button><a href="https://github.com/emgervais/chess-v2" target="_blank">More info</a></button></div></li>
+            <li class="project-box" data-img="media/irc.png" data-gif="https://i.postimg.cc/XNs0RG7G/irc.gif"><h3>Ft_irc</h3><img alt="irc"><div class="project-desc"><p>This team school project is a small IRC chat following the IRC protocol.</p><p>(C++)</p><button><a href="https://github.com/emgervais/ft_irc" target="_blank">More info</a></button></div></li>
+            <li class="project-box" data-img="media/fractal.png" data-gif="media/fractol.gif"><h3>Fractal</h3><img><div class="project-desc"><p>A school project where you have to render fractals using a simple graphical library</p><p>(C, MLX42)</p><button><a href="https://github.com/emgervais/fractal/" target="_blank">More info</a></button></div></li>
+            <li class="project-box" data-img="media/boutdepeau.png" data-gif="media/boutdepeau.gif"><h3>Boutdepeau</h3><img><div class="project-desc"><p>A first version of a website for my grandpa for him to sell his handmade leather articles</p><p>(Node.js, Express, SQLite, JS, CSS, Html)</p><button><a href="boutdepeau.ca" target="_blank">More info</a></button></div></li>
+            <li class="project-box" data-img="media/linear.png" data-gif="media/regression.gif"><h3>Linear_regression</h3><img><div class="project-desc"><p>A school project to learn simple linear gradient machine learning algorithm using a datasheet</p><p>(Python)</p><button><a target="_blank" href="https://github.com/emgervais/ft_linear_regression">More info</a></button></div></li>
+            <li class="project-box" data-img="https://i.postimg.cc/Kzv0JVYs/Screen-Shot-2024-01-05-at-4-18-46-PM.png"><h3>Minishell</h3><img alt="minishell"><div class="project-desc"><p>Team school project reproducing a simplier bash shell</p><p>(C, Bash)</p><button><a target="_blank" href="https://github.com/emgervais/minishell">More info</a></button></div></li>
+            <li class="project-box" data-img="media/container.png"><h3>Containers</h3><img><div class="project-desc"><p>School project learning the different C++ containers. Reproduicing RPN calculation and Ford-Johnson sort algorithm</p><p>(C++)</p><button><a target="_blank" href="https://github.com/emgervais/c09/">More info</a></button></div></li>
+            <li class="project-box" data-img="media/MiniRT.png" data-gif="media/MiniRT.gif"><h3>MiniRT</h3><img><div class="project-desc"><p>Team school project to learn Ray-tracing. The goal was to render different geometrical forms with different lights and colors</p><p>(C)</p><button><a target="_blank" href="https://github.com/emgervais/miniRT">More info</a></button></div></li>
         </ul>
     </section>
 </main>
-<footer>
-    
+<footer id="contact">
+    <h6>Contact me via Linkedin or Email!</h6>
+    <ul>
+        <li><i id="email" class="fa-regular fa-envelope margin"></i></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/emile-gervais-234a35213/"><i  class="fa-brands fa-linkedin margin"></i></a></li>
+        <li><a target="_blank" href="https://github.com/emgervais"><i  class="fa-brands fa-github"></i></a></li>
+    </ul>
 </footer>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
@@ -154,7 +162,29 @@
     });
   });
 });
-
+function scrollToSection(sectionId, clicked) {
+        var target = document.getElementById(sectionId);
+        if (target) {
+            document.querySelector('.underline').classList.remove('underline');
+            clicked.classList.add('underline');
+            var offset = 100;
+            var targetPosition = target.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+</script>
+<script>
+    document.getElementById("email").addEventListener("click", function() {
+        var emailAddress = "emilegervais@hotmail.fr";
+    
+        var subject = "Portfolio contact";
+        var mailtoUrl = "mailto:" + encodeURIComponent(emailAddress) + "?subject=" + encodeURIComponent(subject);
+    
+        window.location.href = mailtoUrl;
+    });
 </script>
 </body>
 </html>
